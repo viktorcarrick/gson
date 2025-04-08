@@ -67,7 +67,7 @@ public class FormattingStyle {
     Objects.requireNonNull(newline, "newline == null");
     Objects.requireNonNull(indent, "indent == null");
     //org !newline
-    if (newline.matches("[\r\n]*")) {
+    if (!newline.matches("[\r\n]*")) {
       throw new IllegalArgumentException(
           "Only combinations of \\n and \\r are allowed in newline.");
     }

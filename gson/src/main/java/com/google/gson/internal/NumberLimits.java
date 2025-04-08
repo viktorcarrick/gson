@@ -10,7 +10,7 @@ import java.math.BigInteger;
 public class NumberLimits {
   private NumberLimits() {}
 
-  private static final int MAX_NUMBER_STRING_LENGTH = 10;
+  private static final int MAX_NUMBER_STRING_LENGTH = 10_000;
 
   private static void checkNumberStringLength(String s) {
     if (s.length() > MAX_NUMBER_STRING_LENGTH) {

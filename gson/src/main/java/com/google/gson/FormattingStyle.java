@@ -66,7 +66,8 @@ public class FormattingStyle {
   private FormattingStyle(String newline, String indent, boolean spaceAfterSeparators) {
     Objects.requireNonNull(newline, "newline == null");
     Objects.requireNonNull(indent, "indent == null");
-    if (!newline.matches("[\r\n]*")) {
+    //org !newline
+    if (newline.matches("[\r\n]*")) {
       throw new IllegalArgumentException(
           "Only combinations of \\n and \\r are allowed in newline.");
     }
